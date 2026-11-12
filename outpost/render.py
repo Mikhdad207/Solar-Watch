@@ -504,8 +504,33 @@ class Renderer:
         label = "Come out of shelter (S)" if sim.sheltering else "SHELTER the crew (S)"
         self.button((x, y + 40, rect.w - 24, 40), label, sim.toggle_shelter,
                     color=(120, 60, 50) if not sim.sheltering else (40, 100, 120), font=self.mid)
-        status, level = sim.sun_status()
-        top = y + 92
+        # NASA observations are historical measurements, not a flare forecast.
+        nasa_status, nasa_flares, nasa_updated = game.nasa_feed.snapshot()
+        nasa_color = GOOD if nasa_status == "LIVE" else WARN
+        self.text(
+            self.tiny,
+            "NASA REAL SOLAR ACTIVITY: " + nasa_status
+            + ("  (%d events)" % len(nasa_flares) if nasa_status == "LIVE" else ""),
+            (x, y + 86),
+            nasa_color
+        )
+        if nasa_status == "LIVE" and nasa_flares:
+            latest = nasa_flares[0]
+            latest_class = latest.get("classType") or "Unknown class"
+            latest_time = (latest.get("beginTime") or "Time unavailable").replace("T", " ")
+            self.text(
+                self.tiny,
+                "Latest observed: %s  %s" % (latest_class, latest_time),
+                (x, y + 105),
+                MUTED
+            )
+        elif nasa_status == "LIVE":
+            self.text(self.tiny, "No flares in the published 7-day data.", (x, y + 105), MUTED)
+        else:
+            self.text(self.tiny, "Showing mission simulation; check internet connection.", (x, y + 105), MUTED)
+        self.text(self.tiny, "NASA events are observations, not predictions.", (x, y + 124), MUTED)
+
+        top = y + 146
         area = pygame.Rect(x, top, rect.w - 24, rect.bottom - top - 10)
         pygame.draw.rect(self.screen, (10, 14, 24), area, border_radius=6)
         self.screen.set_clip(area.inflate(-8, -6))
