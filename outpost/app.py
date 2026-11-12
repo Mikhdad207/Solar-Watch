@@ -5,6 +5,7 @@ import pygame
 from . import data
 from .render import Renderer
 from .sim import Outpost
+from .nasa_feed import NasaFeed
 
 
 class Game:
@@ -14,6 +15,7 @@ class Game:
         pygame.display.set_caption("Solar Watch - Junior Astronaut Mission Trainer")
         self.clock = pygame.time.Clock()
         self.renderer = Renderer(self.screen)
+        self.nasa_feed = NasaFeed()
         self.state = "menu"
         self.sim = None
         self.paused = True
