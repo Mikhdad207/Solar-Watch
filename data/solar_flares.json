@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-18T00:45:10.617355+00:00",
+  "updated": "2026-11-18T15:21:14.889183+00:00",
   "flares": [
     {
       "flrID": "2026-11-11T21:06:00-FLR-001",
@@ -163,7 +163,11 @@
       "activeRegionNum": 14578,
       "note": "",
       "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/FLR/49617/-1",
-      "linkedEvents": null,
+      "linkedEvents": [
+        {
+          "activityID": "2026-11-17T22:30:00-CME-001"
+        }
+      ],
       "sentNotifications": null,
       "submissionTime": "2026-11-17T21:54Z",
       "versionId": 1
