@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-19T15:27:30.033075+00:00",
+  "updated": "2026-11-20T00:25:04.435098+00:00",
   "flares": [
     {
       "flrID": "2026-11-14T21:16:00-FLR-001",
@@ -188,14 +188,14 @@
       "peakTime": "2026-11-19T13:24Z",
       "endTime": "2026-11-19T13:30Z",
       "classType": "M2.4",
-      "sourceLocation": "S20W90",
+      "sourceLocation": "S20W100",
       "activeRegionNum": 14576,
-      "note": "",
+      "note": "Source location based on STEREO A EUV 195 imagery.",
       "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/FLR/49656/-1",
       "linkedEvents": null,
       "sentNotifications": null,
-      "submissionTime": "2026-11-19T14:17Z",
-      "versionId": 2
+      "submissionTime": "2026-11-19T15:26Z",
+      "versionId": 3
     },
     {
       "flrID": "2026-11-19T13:56:00-FLR-001",
