@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-20T15:04:34.178654+00:00",
+  "updated": "2026-11-20T23:48:15.652047+00:00",
   "flares": [
     {
       "flrID": "2026-11-14T21:16:00-FLR-001",
@@ -190,12 +190,12 @@
       "classType": "M2.4",
       "sourceLocation": "S20W100",
       "activeRegionNum": 14576,
-      "note": "Source location based on STEREO A EUV 195 imagery.",
+      "note": "Source location based on STEREO A EUV 195 imagery. This flare is occulted as seen from SDO/AIA and GOES/SUVI.",
       "link": "https://ccmc.gsfc.nasa.gov/DONKI/view/FLR/49656/-1",
       "linkedEvents": null,
       "sentNotifications": null,
-      "submissionTime": "2026-11-19T15:26Z",
-      "versionId": 3
+      "submissionTime": "2026-11-20T15:58Z",
+      "versionId": 4
     },
     {
       "flrID": "2026-11-19T13:56:00-FLR-001",
